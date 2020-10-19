@@ -1,6 +1,7 @@
 ### Date created
 README file created 10/18/2020 (Sunday)
 Project created 10/15/2020
+Read me file updated 10/18/20 for resubmission to project reviewer(s)
 
 ### Project Title
 Bikeshare-2
