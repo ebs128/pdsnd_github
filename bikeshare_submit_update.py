@@ -18,12 +18,12 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input("What city would you like to access data for; Chicago, New York City, or Washington? \n")
+        city = input("What city would you like to access data for: Chicago, New York City, or Washington? \n")
         city = city.lower()
         if city in ['chicago', 'new york city', 'washington']:
             break
         else:
-            print("Oops, that request is not available.  Please enter a valid city i.e. Chicago, New York city or Washington.")
+            print("Please enter a valid city i.e. Chicago, New York city or Washington.")
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
@@ -32,7 +32,7 @@ def get_filters():
         if month in ['january', 'february', 'march', 'april', 'may', 'june', 'all']:
             break
         else:
-            print("Oops, that month is not available. Please enter a valid month from the first 6 months or 'All'\n")
+            print("Please enter a valid month from the first 6 months or 'All'\n")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
@@ -41,7 +41,7 @@ def get_filters():
         if day in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']:
             break
         else:
-            print("Something went wrong. Please enter a valid day of the week or 'All'\n")
+            print("Please enter a valid day of the week or 'All'\n")
 
     print('-'*40)
     return city, month, day
@@ -136,11 +136,14 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
     print("The total travel time in seconds is: ", df['Trip Duration'].sum(), "\n")
     print("The total travel time in minutes is: ", (df['Trip Duration'].sum()/60), "\n")
+    print("The Total travel time in hours is: ", (df['Trip Duration'].sum()/(60*60). "\n")
 
     # TO DO: display mean travel time
     print("The mean travel time in seconds is: ", df['Trip Duration'].mean(), "\n")
 
     print("The mean travel time in minutes is: ", (df['Trip Duration'].mean()/60), "\n")
+
+    print("The Total travel time in hours is: ", (df['Trip Duration'].mean()/(60*60). "\n")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
